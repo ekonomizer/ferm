@@ -33,8 +33,18 @@ group :development do
 end
 
 group :test do
-	gem 'pg'
+  gem 'pg'
   gem 'rspec-rails'
   gem 'webrat'
   gem 'spork', '0.9.0.rc8'
+end
+
+group :development do
+  gem 'rspec-rails'
+  gem 'pg'
+end
+
+group :production do
+  gem 'rspec-rails'
+  gem 'pg'
 end
