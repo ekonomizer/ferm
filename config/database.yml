@@ -32,12 +32,4 @@ test:
 
 production:
   adapter: postgresql
-  host: localhost
-  database: ferm
-  potr: 5432
-  pool: 5
-  username: postgres
-  password: 1
-  timeout: 5000
-  schema_search_path: public
-  encoding: utf8
+  
