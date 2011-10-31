@@ -32,4 +32,12 @@ test:
 
 production:
   adapter: postgresql
-  
+  host: ec2-107-22-213-40.compute-1.amazonaws.com
+  database: udihurljfw
+  potr: 5432
+  pool: 5
+  username: udihurljfw
+  password: GFFhWOWwCCca7wJFWe-d
+  timeout: 5000
+  schema_search_path: public
+  encoding: utf8
