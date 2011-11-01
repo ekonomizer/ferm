@@ -7,7 +7,7 @@ development:
   adapter: postgresql
   host: localhost
   database: ferm
-  potr: 5432
+  port: 5432
   pool: 5
   username: postgres
   password: 1
@@ -22,7 +22,7 @@ test:
   adapter: postgresql
   host: localhost
   database: ferm
-  potr: 5432
+  port: 5432
   pool: 5
   username: postgres
   password: 1
@@ -34,7 +34,7 @@ production:
   adapter: postgresql
   host: ec2-107-22-213-40.compute-1.amazonaws.com
   database: udihurljfw
-  potr: 5432
+  port: 5432
   pool: 5
   username: udihurljfw
   password: GFFhWOWwCCca7wJFWe-d
