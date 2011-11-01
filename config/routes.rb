@@ -2,7 +2,7 @@ App::Application.routes.draw do
   
   get "seeds/getSeeds"
 
-  post "seeds/addSeed"
+  get "seeds/addSeed"
 
   post "seeds/removeSeed"
 
