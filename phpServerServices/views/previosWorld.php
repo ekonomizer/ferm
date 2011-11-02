@@ -1,0 +1,1 @@
+<ferm><? foreach ($results as $result): ?>	<seeds objectName="<?=$result['objectName']?>" x="<?=$result['x']?>" y="<?=$result['y']?>" plantedTime="<?=$result['plantedTime']?>"/>	<? endforeach ?></ferm>
