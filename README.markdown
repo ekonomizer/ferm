@@ -2,9 +2,53 @@
 
 Задание реализованно на двух серверах (php база MYSQL, RoR база PostgreSQL).
 
-Развернутая рабочая версия на php - http://matmac.net/ferm/
+Развернутая рабочая версия - http://matmac.net/ferm/
 Включена поддержка исходного кода.
-На RoR к сожалению не могу развернуть - нет доступа к хостингу с базой PostgreSQL.
+
+В репозитории есть 3 ветки:
+flex-client:
+- клиентская часть на flex (web app). 
+- клиентская часть на flex (air app) файл называется ferm.air. 
+
+php-server:
+папка views - представления формирующие XML ответ сервера.
+MSQL.php - PDO драйвер базы данных.
+startUp.php - файл настроек (БД, кодировки, итп).
+остальные 3 - контроллеры на каждое действие(выбрать все поля, добавить поле, удалить поле).
+
+rails-server:
+seeds_controller - контроллер с 3мя экшенами на каждый запрос клиетской часть (выбрать все поля, добавить поле, удалить поле).
+в views представления на каждый экшен в seeds_controller.
+
+В клиентской части можно переключить с каким сервером будет работать клиент(php или rails).
+В теге Declorations нужно раскоменитировать нужную группу HTTP подключений и закоментировать ненужную.
+
+
+База данных - ferm
+таблица - seedings
+поля:
+id - int
+ObjectName - varchar
+x - float
+y - float
+plantedTime - bigint
+
+Настройка БД на php:
+файл MSQL.php
+метод dbConfig:
+case 'ferm':
+	$this->hostName = 'localhost';
+	$this->userName = 'andrey';
+	$this->password = '1';
+	$this->dbName = 'ferm';
+	break;
+В каждом скрипте при создании подключения к БД черех PDO настраивается конфиг(передачей флага 'ferm').
+Для настройки БД нужно перенастроить case "ferm" в файл MSQL.php метод dbConfig.
+
+Все запросы в серверрах передаются через POST.
+Ссылка на php сервер: http://matmac.net/ferm
+Ссылка на RoR сервер: http://evening-sunset-7307.herokuapp.com
+
 
 Жизненый цикл программы:
 При загрузке клиента отправляем запрос на сервер для загрузки предыдущего состояния игры.
@@ -21,36 +65,3 @@
 
 Приложение ориентированно как можно больше на клиентскую часть, что бы сократить колво запросов и их время выполнение на сервере.
 Сервер работает как помошник работы с БД.
-
-База данных - ferm
-таблица - seedings
-поля:
-id - int
-ObjectName - varchar
-x - float
-y - float
-plantedTime - bigint
-
-Настройки RoR database.yml
-adapter: postgresql
-host: localhost
-database: ferm
-potr: 5432
-pool: 5
-username: postgres
-password: 1
-timeout: 5000
-schema_search_path: public
-encoding: utf8
-
-Настройки БД на php:
-файл phpServerServices/MSQL.php
-метод dbConfig:
-case 'ferm':
-	$this->hostName = 'localhost';
-	$this->userName = 'andrey';
-	$this->password = '1';
-	$this->dbName = 'ferm';
-	break;
-
-В каждом скрипте при создании подключения к БД черех PDO настраивается конфиг(передачей флага 'ferm').
