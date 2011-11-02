@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+	<title>Исходный код ferm</title>
+	<nodes>
+		<node label="html-template">
+			<node label="history">
+				<node icon="cssIcon" label="history.css" url="source/html-template/history/history.css.html"/>
+				<node label="history.js" url="source/html-template/history/history.js.txt"/>
+				<node icon="htmlIcon" label="historyFrame.html" url="source/html-template/history/historyFrame.html"/>
+			</node>
+			<node icon="htmlIcon" label="index.template.html" url="source/html-template/index.template.html"/>
+			<node icon="swfIcon" label="playerProductInstall.swf" url="source/html-template/playerProductInstall.swf"/>
+			<node label="swfobject.js" url="source/html-template/swfobject.js.txt"/>
+		</node>
+		<node label="libs">
+		</node>
+		<node label="src">
+			<node label="images">
+				<node label="clover">
+					<node icon="imageIcon" label="Image 1.png" url="source/images/clover/Image 1.png.html"/>
+					<node icon="imageIcon" label="Image 3.png" url="source/images/clover/Image 3.png.html"/>
+					<node icon="imageIcon" label="Image 5.png" url="source/images/clover/Image 5.png.html"/>
+					<node icon="imageIcon" label="Image 7.png" url="source/images/clover/Image 7.png.html"/>
+					<node icon="imageIcon" label="Image 9.png" url="source/images/clover/Image 9.png.html"/>
+				</node>
+				<node label="potato">
+					<node icon="imageIcon" label="Image 1.png" url="source/images/potato/Image 1.png.html"/>
+					<node icon="imageIcon" label="Image 10.png" url="source/images/potato/Image 10.png.html"/>
+					<node icon="imageIcon" label="Image 3.png" url="source/images/potato/Image 3.png.html"/>
+					<node icon="imageIcon" label="Image 5.png" url="source/images/potato/Image 5.png.html"/>
+					<node icon="imageIcon" label="Image 7.png" url="source/images/potato/Image 7.png.html"/>
+					<node icon="imageIcon" label="Image 8.png" url="source/images/potato/Image 8.png.html"/>
+				</node>
+				<node label="sunflower">
+					<node icon="imageIcon" label="Image 1.png" url="source/images/sunflower/Image 1.png.html"/>
+					<node icon="imageIcon" label="Image 3.png" url="source/images/sunflower/Image 3.png.html"/>
+					<node icon="imageIcon" label="Image 5.png" url="source/images/sunflower/Image 5.png.html"/>
+					<node icon="imageIcon" label="Image 7.png" url="source/images/sunflower/Image 7.png.html"/>
+					<node icon="imageIcon" label="Image 9.png" url="source/images/sunflower/Image 9.png.html"/>
+				</node>
+				<node icon="imageIcon" label="BG.jpg" url="source/images/BG.jpg.html"/>
+				<node icon="imageIcon" label="shovel.png" url="source/images/shovel.png.html"/>
+				<node icon="imageIcon" label="shovelCursor.png" url="source/images/shovelCursor.png.html"/>
+			</node>
+			<node icon="packageIcon" label="isometric" expanded="true">
+				<node icon="actionScriptIcon" label="DrawnIsoTile.as" url="source/isometric/DrawnIsoTile.as.html"/>
+				<node icon="actionScriptIcon" label="GraphicTile.as" url="source/isometric/GraphicTile.as.html"/>
+				<node icon="actionScriptIcon" label="IsoObject.as" url="source/isometric/IsoObject.as.html"/>
+				<node icon="actionScriptIcon" label="IsoUtils.as" url="source/isometric/IsoUtils.as.html"/>
+				<node icon="actionScriptIcon" label="IsoWorld.as" url="source/isometric/IsoWorld.as.html"/>
+				<node icon="actionScriptIcon" label="Library.as" url="source/isometric/Library.as.html"/>
+				<node icon="actionScriptIcon" label="Point3D.as" url="source/isometric/Point3D.as.html"/>
+			</node>
+			<node icon="mxmlAppIcon" selected="true" label="ferm.mxml" url="source/ferm.mxml.html"/>
+		</node>
+		<node label="Новая папка">
+		</node>
+	</nodes>
+	<zipfile label="Загрузить исходный код (ZIP, 647 Кб)" url="ferm.zip">
+	</zipfile>
+	<sdklink label="Загрузить Flex SDK" url="http://www.adobe.com/go/flex4_sdk_download_ru_RU">
+	</sdklink>
+</index>

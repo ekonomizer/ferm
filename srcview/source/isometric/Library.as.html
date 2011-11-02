@@ -1,0 +1,91 @@
+<!-- saved from url=(0014)about:internet -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Library.as</title>
+<link rel="stylesheet" type="text/css" href="../../SourceStyles.css"/>
+</head>
+
+<body><pre><span class="ActionScriptpackage">package</span> <span class="ActionScriptDefault_Text">isometric</span>
+<span class="ActionScriptBracket/Brace">{</span>
+    <span class="ActionScriptReserved">public</span> <span class="ActionScriptclass">class</span> <span class="ActionScriptDefault_Text">Library</span>
+    <span class="ActionScriptBracket/Brace">{</span>
+        <span class="ActionScriptReserved">public</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">clover</span>:<span class="ActionScriptDefault_Text">Object</span>;
+        <span class="ActionScriptReserved">public</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">potato</span>:<span class="ActionScriptDefault_Text">Object</span>;
+        <span class="ActionScriptReserved">public</span> <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">sunflower</span>:<span class="ActionScriptDefault_Text">Object</span>;
+        
+        <span class="ActionScriptReserved">public</span> <span class="ActionScriptfunction">function</span> <span class="ActionScriptDefault_Text">Library</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptBracket/Brace">)</span>
+        <span class="ActionScriptBracket/Brace">{</span>
+            <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">maturity</span>:<span class="ActionScriptDefault_Text">Array</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptReserved">new</span> <span class="ActionScriptDefault_Text">Array</span><span class="ActionScriptBracket/Brace">(</span><span class="ActionScriptBracket/Brace">)</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>0<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/clover/Image 1.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 50<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 72<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>1<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/clover/Image 3.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 28<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>2<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/clover/Image 5.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 33<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>3<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/clover/Image 7.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 41<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>4<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/clover/Image 9.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 44<span class="ActionScriptBracket/Brace">}</span>;
+            
+            <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">dragImage</span>:<span class="ActionScriptDefault_Text">Object</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/clover/Image 9.png"</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">width</span>: 97<span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">height</span>: 72<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">repeatCount</span>:<span class="ActionScriptDefault_Text">int</span> <span class="ActionScriptOperator">=</span> 4;
+            <span class="ActionScriptvar">var</span> <span class="ActionScriptDefault_Text">period</span>:<span class="ActionScriptDefault_Text">int</span> <span class="ActionScriptOperator">=</span> 5000;            
+            <span class="ActionScriptDefault_Text">clover</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">maturity</span>: <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">period</span>: <span class="ActionScriptDefault_Text">period</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">dragImage</span>: <span class="ActionScriptDefault_Text">dragImage</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">repeatCount</span>: <span class="ActionScriptDefault_Text">repeatCount</span><span class="ActionScriptBracket/Brace">}</span>;
+            
+            <span class="ActionScriptDefault_Text">maturity</span> <span class="ActionScriptOperator">=</span> [];
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>0<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/potato/Image 1.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 27<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>1<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/potato/Image 3.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 27<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>2<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/potato/Image 5.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 42<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>3<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/potato/Image 7.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 45<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>4<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/potato/Image 8.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 44<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>5<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/potato/Image 10.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 50<span class="ActionScriptBracket/Brace">}</span>;
+            
+            <span class="ActionScriptDefault_Text">dragImage</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/potato/Image 10.png"</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">width</span>: 98<span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">height</span>: 76<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">repeatCount</span> <span class="ActionScriptOperator">=</span> 5;
+            <span class="ActionScriptDefault_Text">period</span> <span class="ActionScriptOperator">=</span> 3000;
+            <span class="ActionScriptDefault_Text">potato</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">maturity</span>: <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">period</span>: <span class="ActionScriptDefault_Text">period</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">dragImage</span>: <span class="ActionScriptDefault_Text">dragImage</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">repeatCount</span>: <span class="ActionScriptDefault_Text">repeatCount</span><span class="ActionScriptBracket/Brace">}</span>;
+            
+            <span class="ActionScriptDefault_Text">maturity</span> <span class="ActionScriptOperator">=</span> [];
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>0<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/sunflower/Image 1.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 27<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>1<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/sunflower/Image 3.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 45<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>2<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/sunflower/Image 5.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 59<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>3<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/sunflower/Image 7.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 83<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptBracket/Brace">[</span>4<span class="ActionScriptBracket/Brace">]</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/sunflower/Image 9.png"</span><span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">xOffset</span>: 49<span class="ActionScriptOperator">,</span>
+                <span class="ActionScriptDefault_Text">yOffset</span>: 100<span class="ActionScriptBracket/Brace">}</span>;
+            
+            <span class="ActionScriptDefault_Text">dragImage</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">source</span>: <span class="ActionScriptString">"images/sunflower/Image 9.png"</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">width</span>: 98<span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">height</span>: 126<span class="ActionScriptBracket/Brace">}</span>;
+            <span class="ActionScriptDefault_Text">repeatCount</span> <span class="ActionScriptOperator">=</span> 4;
+            <span class="ActionScriptDefault_Text">period</span> <span class="ActionScriptOperator">=</span> 7000;            
+            <span class="ActionScriptDefault_Text">sunflower</span> <span class="ActionScriptOperator">=</span> <span class="ActionScriptBracket/Brace">{</span><span class="ActionScriptDefault_Text">maturity</span>: <span class="ActionScriptDefault_Text">maturity</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">period</span>: <span class="ActionScriptDefault_Text">period</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">dragImage</span>: <span class="ActionScriptDefault_Text">dragImage</span><span class="ActionScriptOperator">,</span> <span class="ActionScriptDefault_Text">repeatCount</span>: <span class="ActionScriptDefault_Text">repeatCount</span><span class="ActionScriptBracket/Brace">}</span>;            
+        <span class="ActionScriptBracket/Brace">}</span>
+    <span class="ActionScriptBracket/Brace">}</span>
+<span class="ActionScriptBracket/Brace">}</span></pre></body>
+</html>
