@@ -2,9 +2,15 @@
 
 Задание реализованно на двух серверах (php база MYSQL, RoR база PostgreSQL).
 
-Развернутая рабочая версия на php - http://matmac.net/ferm/
+Развернутая рабочая версия - http://matmac.net/ferm/
 Включена поддержка исходного кода.
-На RoR к сожалению не могу развернуть - нет доступа к хостингу с базой PostgreSQL.
+
+flex-client:
+- клиентская часть на flex (web app). 
+- клиентская часть на flex (air app) файл называется ferm.air. 
+
+Все запросы в серверрах передаются через POST.
+Ссылка на RoR сервер: http://evening-sunset-7307.herokuapp.com
 
 Жизненый цикл программы:
 При загрузке клиента отправляем запрос на сервер для загрузки предыдущего состояния игры.
@@ -21,36 +27,3 @@
 
 Приложение ориентированно как можно больше на клиентскую часть, что бы сократить колво запросов и их время выполнение на сервере.
 Сервер работает как помошник работы с БД.
-
-База данных - ferm
-таблица - seedings
-поля:
-id - int
-ObjectName - varchar
-x - float
-y - float
-plantedTime - bigint
-
-Настройки RoR database.yml
-adapter: postgresql
-host: localhost
-database: ferm
-potr: 5432
-pool: 5
-username: postgres
-password: 1
-timeout: 5000
-schema_search_path: public
-encoding: utf8
-
-Настройки БД на php:
-файл phpServerServices/MSQL.php
-метод dbConfig:
-case 'ferm':
-	$this->hostName = 'localhost';
-	$this->userName = 'andrey';
-	$this->password = '1';
-	$this->dbName = 'ferm';
-	break;
-
-В каждом скрипте при создании подключения к БД черех PDO настраивается конфиг(передачей флага 'ferm').
